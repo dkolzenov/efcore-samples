@@ -25,4 +25,7 @@
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.10" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EFCoreSample.Data.Sqlite\EFCoreSample.Data.Sqlite.csproj" />
+  </ItemGroup>
 </Project>

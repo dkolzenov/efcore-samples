@@ -27,5 +27,8 @@
     <ProjectReference Include="..\EFCoreSample.Data\EFCoreSample.Data.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
+    <ProjectReference Include="..\EFCoreSample.Data.Sqlite\EFCoreSample.Data.Sqlite.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
   </ItemGroup>
 </Project>

@@ -2,7 +2,7 @@
 {
     using Microsoft.EntityFrameworkCore;
 
-    using EFCoreSample.Data;
+    using EFCoreSample.Data.DbContexts;
 
     public static class SqliteContextExtension
     {

@@ -1,4 +1,4 @@
-﻿namespace EFCoreSample.Data
+namespace EFCoreSample.Data.DbContexts
 {
     using Microsoft.EntityFrameworkCore;
 

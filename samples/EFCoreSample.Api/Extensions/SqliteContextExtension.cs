@@ -8,6 +8,8 @@
     {
         private const string ConnectionStringName = "SqliteConnection";
 
+        private const string MigrationAssemblyName = "EFCoreSample.Data.Sqlite";
+
         public static void AddCustomSqliteContext(
             this IServiceCollection services,
             IConfiguration configuration)
@@ -16,7 +18,9 @@
                 .GetConnectionString(ConnectionStringName);
 
             services.AddDbContext<ApplicationDbContext>(
-                o => o.UseSqlite(connectionString));
+                options => options.UseSqlite(connectionString,
+                sqliteOptions => sqliteOptions
+                    .MigrationsAssembly(MigrationAssemblyName)));
 
             services.BuildServiceProvider()
                 .GetService<ApplicationDbContext>()!

@@ -14,6 +14,8 @@ namespace EFCoreSample.Data.DbContexts
 
         public DbSet<WordOnGrid> WordOnGrids { get; set; } = null!;
 
+        public DbSet<CharacterOnGrid> CharacterOnGrids { get; set; } = null!;
+
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {

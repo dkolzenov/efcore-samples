@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EFCoreSample.Data.Sqlite.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20221022071936_Initial")]
+    [Migration("20221022081250_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -60,7 +60,7 @@ namespace EFCoreSample.Data.Sqlite.Migrations
 
                     b.HasIndex("DataGridId");
 
-                    b.ToTable("CharacterOnGrids");
+                    b.ToTable("CharactersOnGrid");
                 });
 
             modelBuilder.Entity("EFCoreSample.Data.Entities.DataGrid", b =>
@@ -136,7 +136,7 @@ namespace EFCoreSample.Data.Sqlite.Migrations
 
                     b.HasIndex("WordSetId");
 
-                    b.ToTable("WordOnGrids");
+                    b.ToTable("WordsOnGrid");
                 });
 
             modelBuilder.Entity("EFCoreSample.Data.Entities.WordSet", b =>
@@ -146,6 +146,10 @@ namespace EFCoreSample.Data.Sqlite.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Category")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Language")
                         .IsRequired()
                         .HasColumnType("TEXT");
 

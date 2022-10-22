@@ -58,7 +58,7 @@ namespace EFCoreSample.Data.Sqlite.Migrations
 
                     b.HasIndex("DataGridId");
 
-                    b.ToTable("CharacterOnGrids");
+                    b.ToTable("CharactersOnGrid");
                 });
 
             modelBuilder.Entity("EFCoreSample.Data.Entities.DataGrid", b =>
@@ -134,7 +134,7 @@ namespace EFCoreSample.Data.Sqlite.Migrations
 
                     b.HasIndex("WordSetId");
 
-                    b.ToTable("WordOnGrids");
+                    b.ToTable("WordsOnGrid");
                 });
 
             modelBuilder.Entity("EFCoreSample.Data.Entities.WordSet", b =>
@@ -144,6 +144,10 @@ namespace EFCoreSample.Data.Sqlite.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Category")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Language")
                         .IsRequired()
                         .HasColumnType("TEXT");
 

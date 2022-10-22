@@ -60,7 +60,8 @@ namespace EFCoreSample.Data.Sqlite.Migrations
                     Id = table.Column<long>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Words = table.Column<string>(type: "TEXT", nullable: false),
-                    Category = table.Column<string>(type: "TEXT", nullable: false)
+                    Category = table.Column<string>(type: "TEXT", nullable: false),
+                    Language = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -68,7 +69,7 @@ namespace EFCoreSample.Data.Sqlite.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "CharacterOnGrids",
+                name: "CharactersOnGrid",
                 columns: table => new
                 {
                     Id = table.Column<long>(type: "INTEGER", nullable: false)
@@ -79,22 +80,22 @@ namespace EFCoreSample.Data.Sqlite.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_CharacterOnGrids", x => x.Id);
+                    table.PrimaryKey("PK_CharactersOnGrid", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_CharacterOnGrids_Alphabets_AlphabetId",
+                        name: "FK_CharactersOnGrid_Alphabets_AlphabetId",
                         column: x => x.AlphabetId,
                         principalTable: "Alphabets",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_CharacterOnGrids_DataGrids_DataGridId",
+                        name: "FK_CharactersOnGrid_DataGrids_DataGridId",
                         column: x => x.DataGridId,
                         principalTable: "DataGrids",
                         principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
-                name: "WordOnGrids",
+                name: "WordsOnGrid",
                 columns: table => new
                 {
                     Id = table.Column<long>(type: "INTEGER", nullable: false)
@@ -106,20 +107,20 @@ namespace EFCoreSample.Data.Sqlite.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_WordOnGrids", x => x.Id);
+                    table.PrimaryKey("PK_WordsOnGrid", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_WordOnGrids_DataGrids_DataGridId",
+                        name: "FK_WordsOnGrid_DataGrids_DataGridId",
                         column: x => x.DataGridId,
                         principalTable: "DataGrids",
                         principalColumn: "Id");
                     table.ForeignKey(
-                        name: "FK_WordOnGrids_Directions_DirectionId",
+                        name: "FK_WordsOnGrid_Directions_DirectionId",
                         column: x => x.DirectionId,
                         principalTable: "Directions",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_WordOnGrids_WordSets_WordSetId",
+                        name: "FK_WordsOnGrid_WordSets_WordSetId",
                         column: x => x.WordSetId,
                         principalTable: "WordSets",
                         principalColumn: "Id",
@@ -127,38 +128,38 @@ namespace EFCoreSample.Data.Sqlite.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_CharacterOnGrids_AlphabetId",
-                table: "CharacterOnGrids",
+                name: "IX_CharactersOnGrid_AlphabetId",
+                table: "CharactersOnGrid",
                 column: "AlphabetId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_CharacterOnGrids_DataGridId",
-                table: "CharacterOnGrids",
+                name: "IX_CharactersOnGrid_DataGridId",
+                table: "CharactersOnGrid",
                 column: "DataGridId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_WordOnGrids_DataGridId",
-                table: "WordOnGrids",
+                name: "IX_WordsOnGrid_DataGridId",
+                table: "WordsOnGrid",
                 column: "DataGridId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_WordOnGrids_DirectionId",
-                table: "WordOnGrids",
+                name: "IX_WordsOnGrid_DirectionId",
+                table: "WordsOnGrid",
                 column: "DirectionId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_WordOnGrids_WordSetId",
-                table: "WordOnGrids",
+                name: "IX_WordsOnGrid_WordSetId",
+                table: "WordsOnGrid",
                 column: "WordSetId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "CharacterOnGrids");
+                name: "CharactersOnGrid");
 
             migrationBuilder.DropTable(
-                name: "WordOnGrids");
+                name: "WordsOnGrid");
 
             migrationBuilder.DropTable(
                 name: "Alphabets");

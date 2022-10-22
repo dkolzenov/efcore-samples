@@ -1,12 +1,22 @@
 namespace EFCoreSample.Data.DbContexts
 {
     using Microsoft.EntityFrameworkCore;
-
-    using EFCoreSample.Data.Entities;
+    
+    using  EFCoreSample.Data.Entities;
 
     public class ApplicationDbContext : DbContext
     {
-        public DbSet<TestEntity> Tests { get; set; } = null!;
+        public DbSet<WordSet> WordSets { get; set; } = null!;
+
+        public DbSet<Alphabet> Alphabets { get; set; } = null!;
+
+        public DbSet<Direction> Directions { get; set; } = null!;
+
+        public DbSet<WordOnGrid> WordsOnGrid { get; set; } = null!;
+
+        public DbSet<CharacterOnGrid> CharactersOnGrid { get; set; } = null!;
+
+        public DbSet<DataGrid> DataGrids { get; set; } = null!;
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
@@ -14,4 +24,3 @@ namespace EFCoreSample.Data.DbContexts
         }
     }
 }
-

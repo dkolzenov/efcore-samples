@@ -34,6 +34,20 @@ namespace EFCoreSample.Data.Sqlite.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Alphabets");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1L,
+                            Characters = "abcdefghijklmnopqrstuvwxyz",
+                            Script = "latin"
+                        },
+                        new
+                        {
+                            Id = 2L,
+                            Characters = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя",
+                            Script = "cyrillic"
+                        });
                 });
 
             modelBuilder.Entity("EFCoreSample.Data.Entities.CharacterOnGrid", b =>

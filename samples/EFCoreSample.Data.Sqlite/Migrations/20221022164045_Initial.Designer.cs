@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EFCoreSample.Data.Sqlite.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20221022081250_Initial")]
+    [Migration("20221022164045_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -36,6 +36,20 @@ namespace EFCoreSample.Data.Sqlite.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Alphabets");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1L,
+                            Characters = "abcdefghijklmnopqrstuvwxyz",
+                            Script = "latin"
+                        },
+                        new
+                        {
+                            Id = 2L,
+                            Characters = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя",
+                            Script = "cyrillic"
+                        });
                 });
 
             modelBuilder.Entity("EFCoreSample.Data.Entities.CharacterOnGrid", b =>

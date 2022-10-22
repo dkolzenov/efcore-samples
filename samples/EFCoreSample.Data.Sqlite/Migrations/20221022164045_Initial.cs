@@ -127,6 +127,16 @@ namespace EFCoreSample.Data.Sqlite.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.InsertData(
+                table: "Alphabets",
+                columns: new[] { "Id", "Characters", "Script" },
+                values: new object[] { 1L, "abcdefghijklmnopqrstuvwxyz", "latin" });
+
+            migrationBuilder.InsertData(
+                table: "Alphabets",
+                columns: new[] { "Id", "Characters", "Script" },
+                values: new object[] { 2L, "абвгдеёжзийклмнопрстуфхцчшщъыьэюя", "cyrillic" });
+
             migrationBuilder.CreateIndex(
                 name: "IX_CharactersOnGrid_AlphabetId",
                 table: "CharactersOnGrid",

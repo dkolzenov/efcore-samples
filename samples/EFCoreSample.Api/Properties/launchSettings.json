@@ -12,7 +12,7 @@
     "EFCoreSample.Api": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "api/wordongrid",
+      "launchUrl": "api/alphabet",
       "applicationUrl": "http://localhost:5212",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
@@ -21,7 +21,7 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "api/wordongrid",
+      "launchUrl": "api/alphabet",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

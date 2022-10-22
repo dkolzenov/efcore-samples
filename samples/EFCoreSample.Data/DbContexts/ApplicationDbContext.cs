@@ -12,9 +12,9 @@ namespace EFCoreSample.Data.DbContexts
 
         public DbSet<Direction> Directions { get; set; } = null!;
 
-        public DbSet<WordOnGrid> WordOnGrids { get; set; } = null!;
+        public DbSet<WordOnGrid> WordsOnGrid { get; set; } = null!;
 
-        public DbSet<CharacterOnGrid> CharacterOnGrids { get; set; } = null!;
+        public DbSet<CharacterOnGrid> CharactersOnGrid { get; set; } = null!;
 
         public DbSet<DataGrid> DataGrids { get; set; } = null!;
 

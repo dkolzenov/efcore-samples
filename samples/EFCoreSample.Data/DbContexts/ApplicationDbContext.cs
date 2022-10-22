@@ -1,8 +1,8 @@
 namespace EFCoreSample.Data.DbContexts
 {
+    using System.Reflection;
     using Microsoft.EntityFrameworkCore;
-    
-    using  EFCoreSample.Data.Entities;
+    using EFCoreSample.Data.Entities;
 
     public class ApplicationDbContext : DbContext
     {
@@ -21,6 +21,12 @@ namespace EFCoreSample.Data.DbContexts
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
+        }
+        
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+            base.OnModelCreating(builder);
         }
     }
 }

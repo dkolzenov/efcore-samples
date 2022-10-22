@@ -12,6 +12,8 @@ namespace EFCoreSample.Data.DbContexts
 
         public DbSet<Direction> Directions { get; set; } = null!;
 
+        public DbSet<WordOnGrid> WordOnGrids { get; set; } = null!;
+
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {

@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreSample.Data.Sqlite", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreSample.Data.PostgreSql", "EFCoreSample.Data.PostgreSql\EFCoreSample.Data.PostgreSql.csproj", "{EFB2B750-B3A0-4DD9-89FA-E38DAD3C443E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreSample.Data.SqlServer", "EFCoreSample.Data.SqlServer\EFCoreSample.Data.SqlServer.csproj", "{0A1A9F2C-E79C-4DF6-A5EE-767AFF61B4A3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{EFB2B750-B3A0-4DD9-89FA-E38DAD3C443E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EFB2B750-B3A0-4DD9-89FA-E38DAD3C443E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EFB2B750-B3A0-4DD9-89FA-E38DAD3C443E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A1A9F2C-E79C-4DF6-A5EE-767AFF61B4A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A1A9F2C-E79C-4DF6-A5EE-767AFF61B4A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A1A9F2C-E79C-4DF6-A5EE-767AFF61B4A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A1A9F2C-E79C-4DF6-A5EE-767AFF61B4A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

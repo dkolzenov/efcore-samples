@@ -1,4 +1,5 @@
 ﻿using EFCoreSample.Api.Extensions;
+using EFCoreSample.Data.Sqlite.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,12 +8,15 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
 // Order is important when adding new migrations
-builder.Services.AddCustomPostgreSqlContext(builder.Configuration);
+//builder.Services.AddCustomPostgreSqlContext(builder.Configuration);
 builder.Services.AddCustomSqliteContext(builder.Configuration);
+builder.Services.AddCustomCorsPolicy(builder.Configuration);
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
+
+app.UseCustomCorsPolicy();
 
 app.UseAuthorization();
 

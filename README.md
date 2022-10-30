@@ -43,7 +43,7 @@
 ##
 ##
 
-###### `EN translate`
+###### `EN Translate`
 ### The repository was created as a demonstration of working with various database providers using ORM Entity Framework Core
 
 ## Providers

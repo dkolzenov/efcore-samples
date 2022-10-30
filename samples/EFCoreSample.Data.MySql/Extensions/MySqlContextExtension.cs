@@ -6,30 +6,25 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-using EFCoreSample.Data.DbContexts;
+using EFCoreSample.Data.Extensions;
 
 public static class MySqlContextExtension
 {
     private const string ConnectionStringName = "MySqlConnection";
     
-    public static void AddCustomMySqlContext(
+    public static void AddCustomMySqlContext<TContext>(
         this IServiceCollection services,
-        IConfiguration configuration)
+        IConfiguration configuration) where TContext : DbContext
     {
         var migrationAssemblyName = Assembly
             .GetExecutingAssembly().GetName().Name;
         
         var connectionString = configuration
             .GetConnectionString(ConnectionStringName);
-
-        services.AddDbContext<ApplicationDbContext>(
+        
+        services.AddCustomDbContext<TContext>(
             options => options.UseMySQL(connectionString,
                 mySqlOptions => mySqlOptions
                     .MigrationsAssembly(migrationAssemblyName)));
-
-        services.BuildServiceProvider()
-            .GetService<ApplicationDbContext>()!
-            .Database
-            .Migrate();
     }
 }

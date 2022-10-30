@@ -1,6 +1,6 @@
 # Entity Framework Core samples
 
-### Ставь звезду, если репозиторий был полезен / Put a star if the repository was useful
+### Ставь звезду, если репозиторий был полезен ★ / Put a star if the repository was useful ★
 
 ##
 

@@ -14,7 +14,6 @@
     <None Remove="DbContexts\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Entities\" />
     <Folder Include="DbContexts\" />
   </ItemGroup>
   <ItemGroup>

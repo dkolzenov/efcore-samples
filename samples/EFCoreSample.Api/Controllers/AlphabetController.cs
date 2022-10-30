@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using EFCoreSample.Data.DbContexts;
-using EFCoreSample.Data.Entities;
+using EFCoreSample.Persistence.DbContexts;
+using EFCoreSample.Persistence.Entities;
 
 namespace EFCoreSample.Api.Controllers;
 

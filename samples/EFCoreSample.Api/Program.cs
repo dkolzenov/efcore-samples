@@ -1,10 +1,10 @@
 ﻿using EFCoreSample.Api.Extensions;
-using EFCoreSample.Data.DbContexts;
-using EFCoreSample.Data.Sqlite.Extensions;
-using EFCoreSample.Data.PostgreSql.Extensions;
-using EFCoreSample.Data.SqlServer.Extensions;
-using EFCoreSample.Data.MySql.Extensions;
-using EFCoreSample.Data.Oracle.Extensions;
+using EFCoreSample.Persistence.DbContexts;
+using EFCoreSample.Persistence.Sqlite.Extensions;
+using EFCoreSample.Persistence.PostgreSql.Extensions;
+using EFCoreSample.Persistence.SqlServer.Extensions;
+using EFCoreSample.Persistence.MySql.Extensions;
+using EFCoreSample.Persistence.Oracle.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 

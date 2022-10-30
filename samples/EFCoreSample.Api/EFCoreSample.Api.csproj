@@ -25,16 +25,16 @@
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.7" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\EFCoreSample.Data.MySql\EFCoreSample.Data.MySql.csproj" />
-    <ProjectReference Include="..\EFCoreSample.Data.Oracle\EFCoreSample.Data.Oracle.csproj" />
-    <ProjectReference Include="..\EFCoreSample.Data.SqlServer\EFCoreSample.Data.SqlServer.csproj" />
-    <ProjectReference Include="..\EFCoreSample.Data\EFCoreSample.Data.csproj">
+    <ProjectReference Include="..\EFCoreSample.Persistence.MySql\EFCoreSample.Persistence.MySql.csproj" />
+    <ProjectReference Include="..\EFCoreSample.Persistence.Oracle\EFCoreSample.Persistence.Oracle.csproj" />
+    <ProjectReference Include="..\EFCoreSample.Persistence.SqlServer\EFCoreSample.Persistence.SqlServer.csproj" />
+    <ProjectReference Include="..\EFCoreSample.Persistence\EFCoreSample.Persistence.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
-    <ProjectReference Include="..\EFCoreSample.Data.Sqlite\EFCoreSample.Data.Sqlite.csproj">
+    <ProjectReference Include="..\EFCoreSample.Persistence.Sqlite\EFCoreSample.Persistence.Sqlite.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
-    <ProjectReference Include="..\EFCoreSample.Data.PostgreSql\EFCoreSample.Data.PostgreSql.csproj">
+    <ProjectReference Include="..\EFCoreSample.Persistence.PostgreSql\EFCoreSample.Persistence.PostgreSql.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
   </ItemGroup>

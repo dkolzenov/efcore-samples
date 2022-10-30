@@ -6,30 +6,25 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-using EFCoreSample.Data.DbContexts;
+using EFCoreSample.Data.Extensions;
 
 public static class SqliteContextExtension
 {
     private const string ConnectionStringName = "SqliteConnection";
     
-    public static void AddCustomSqliteContext(
+    public static void AddCustomSqliteContext<TContext>(
         this IServiceCollection services,
-        IConfiguration configuration)
+        IConfiguration configuration) where TContext : DbContext
     {
         var migrationAssemblyName = Assembly
             .GetExecutingAssembly().GetName().Name;
         
         var connectionString = configuration
             .GetConnectionString(ConnectionStringName);
-
-        services.AddDbContext<ApplicationDbContext>(
+        
+        services.AddCustomDbContext<TContext>(
             options => options.UseSqlite(connectionString,
                 sqliteOptions => sqliteOptions
                     .MigrationsAssembly(migrationAssemblyName)));
-
-        services.BuildServiceProvider()
-            .GetService<ApplicationDbContext>()!
-            .Database
-            .Migrate();
     }
 }

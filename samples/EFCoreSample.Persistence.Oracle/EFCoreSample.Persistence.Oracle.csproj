@@ -8,11 +8,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Oracle.EntityFrameworkCore" Version="6.21.61" />
+        <PackageReference Include="Oracle.EntityFrameworkCore" Version="6.21.61"/>
     </ItemGroup>
-
+    
     <ItemGroup>
-      <ProjectReference Include="..\EFCoreSample.Persistence\EFCoreSample.Persistence.csproj" />
+        <ProjectReference Include="..\EFCoreSample.Persistence\EFCoreSample.Persistence.csproj"/>
     </ItemGroup>
 
 </Project>

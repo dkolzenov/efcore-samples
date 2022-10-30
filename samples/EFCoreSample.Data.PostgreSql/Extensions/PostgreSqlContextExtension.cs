@@ -6,30 +6,25 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-using EFCoreSample.Data.DbContexts;
+using EFCoreSample.Data.Extensions;
 
 public static class PostgreSqlContextExtension
 {
     private const string ConnectionStringName = "PostgreSqlConnection";
-
-    public static void AddCustomPostgreSqlContext(
+    
+    public static void AddCustomPostgreSqlContext<TContext>(
         this IServiceCollection services,
-        IConfiguration configuration)
+        IConfiguration configuration) where TContext : DbContext
     {
         var migrationAssemblyName = Assembly
             .GetExecutingAssembly().GetName().Name;
         
         var connectionString = configuration
             .GetConnectionString(ConnectionStringName);
-
-        services.AddDbContext<ApplicationDbContext>(
+        
+        services.AddCustomDbContext<TContext>(
             options => options.UseNpgsql(connectionString,
-                postgresOptions => postgresOptions
+                npgsqlOptions => npgsqlOptions
                     .MigrationsAssembly(migrationAssemblyName)));
-
-        services.BuildServiceProvider()
-            .GetService<ApplicationDbContext>()!
-            .Database
-            .Migrate();
     }
 }

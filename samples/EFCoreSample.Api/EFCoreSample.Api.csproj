@@ -15,7 +15,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
-    <Folder Include="Extensions\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.10">
@@ -26,6 +25,9 @@
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.7" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\EFCoreSample.Data.MySql\EFCoreSample.Data.MySql.csproj" />
+    <ProjectReference Include="..\EFCoreSample.Data.Oracle\EFCoreSample.Data.Oracle.csproj" />
+    <ProjectReference Include="..\EFCoreSample.Data.SqlServer\EFCoreSample.Data.SqlServer.csproj" />
     <ProjectReference Include="..\EFCoreSample.Data\EFCoreSample.Data.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>

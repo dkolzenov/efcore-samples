@@ -1,4 +1,4 @@
-namespace EFCoreSample.Data.Sqlite.Extensions;
+namespace EFCoreSample.Data.SqlServer.Extensions;
 
 using System.Reflection;
 
@@ -8,11 +8,11 @@ using Microsoft.Extensions.DependencyInjection;
 
 using EFCoreSample.Data.Extensions;
 
-public static class SqliteContextExtension
+public static class SqlServerContextExtension
 {
-    private const string ConnectionStringName = "SqliteConnection";
+    private const string ConnectionStringName = "SqlServerConnection";
     
-    public static void AddCustomSqliteContext<TContext>(
+    public static void AddCustomSqlServerContext<TContext>(
         this IServiceCollection services,
         IConfiguration configuration) where TContext : DbContext
     {
@@ -23,8 +23,8 @@ public static class SqliteContextExtension
             .GetConnectionString(ConnectionStringName);
         
         services.AddCustomDbContext<TContext>(
-            options => options.UseSqlite(connectionString,
-                sqliteOptions => sqliteOptions
+            options => options.UseSqlServer(connectionString,
+                sqlServerOptions => sqlServerOptions
                     .MigrationsAssembly(migrationAssemblyName)));
     }
 }

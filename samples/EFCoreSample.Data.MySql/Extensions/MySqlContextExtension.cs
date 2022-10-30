@@ -1,4 +1,4 @@
-namespace EFCoreSample.Data.Sqlite.Extensions;
+namespace EFCoreSample.Data.MySql.Extensions;
 
 using System.Reflection;
 
@@ -8,11 +8,11 @@ using Microsoft.Extensions.DependencyInjection;
 
 using EFCoreSample.Data.Extensions;
 
-public static class SqliteContextExtension
+public static class MySqlContextExtension
 {
-    private const string ConnectionStringName = "SqliteConnection";
+    private const string ConnectionStringName = "MySqlConnection";
     
-    public static void AddCustomSqliteContext<TContext>(
+    public static void AddCustomMySqlContext<TContext>(
         this IServiceCollection services,
         IConfiguration configuration) where TContext : DbContext
     {
@@ -23,8 +23,8 @@ public static class SqliteContextExtension
             .GetConnectionString(ConnectionStringName);
         
         services.AddCustomDbContext<TContext>(
-            options => options.UseSqlite(connectionString,
-                sqliteOptions => sqliteOptions
+            options => options.UseMySQL(connectionString,
+                mySqlOptions => mySqlOptions
                     .MigrationsAssembly(migrationAssemblyName)));
     }
 }

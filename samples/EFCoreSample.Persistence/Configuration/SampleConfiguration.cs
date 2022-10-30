@@ -23,11 +23,13 @@ public class SampleConfiguration : IEntityTypeConfiguration<Sample>
         {
             new()
             {
+                Id = 1,
                 Title = "SampleTitle_1",
                 Description = "SampleDescription_1"
             },
             new()
             {
+                Id = 2,
                 Title = "SampleTitle_2",
                 Description = "SampleDescription_2"
             }

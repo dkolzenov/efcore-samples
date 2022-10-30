@@ -1,41 +1,25 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-  </PropertyGroup>
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="Controllers\" />
-    <None Remove="Microsoft.EntityFrameworkCore.Design" />
-    <None Remove="Extensions\" />
-    <None Remove="Microsoft.EntityFrameworkCore.Sqlite" />
-    <None Remove="Npgsql.EntityFrameworkCore.PostgreSQL" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.10">
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.10" />
-    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.7" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\EFCoreSample.Persistence.MySql\EFCoreSample.Persistence.MySql.csproj" />
-    <ProjectReference Include="..\EFCoreSample.Persistence.Oracle\EFCoreSample.Persistence.Oracle.csproj" />
-    <ProjectReference Include="..\EFCoreSample.Persistence.SqlServer\EFCoreSample.Persistence.SqlServer.csproj" />
-    <ProjectReference Include="..\EFCoreSample.Persistence\EFCoreSample.Persistence.csproj">
-      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
-    </ProjectReference>
-    <ProjectReference Include="..\EFCoreSample.Persistence.Sqlite\EFCoreSample.Persistence.Sqlite.csproj">
-      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
-    </ProjectReference>
-    <ProjectReference Include="..\EFCoreSample.Persistence.PostgreSql\EFCoreSample.Persistence.PostgreSql.csproj">
-      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
-    </ProjectReference>
-  </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.10">
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+            <PrivateAssets>all</PrivateAssets>
+        </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\EFCoreSample.Persistence\EFCoreSample.Persistence.csproj" />
+        <ProjectReference Include="..\EFCoreSample.Persistence.MySql\EFCoreSample.Persistence.MySql.csproj" />
+        <ProjectReference Include="..\EFCoreSample.Persistence.Oracle\EFCoreSample.Persistence.Oracle.csproj" />
+        <ProjectReference Include="..\EFCoreSample.Persistence.SqlServer\EFCoreSample.Persistence.SqlServer.csproj" />
+        <ProjectReference Include="..\EFCoreSample.Persistence.Sqlite\EFCoreSample.Persistence.Sqlite.csproj" />
+        <ProjectReference Include="..\EFCoreSample.Persistence.PostgreSql\EFCoreSample.Persistence.PostgreSql.csproj" />
+    </ItemGroup>
+
 </Project>

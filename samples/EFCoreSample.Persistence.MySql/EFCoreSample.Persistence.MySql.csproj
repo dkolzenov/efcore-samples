@@ -8,11 +8,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="MySql.EntityFrameworkCore" Version="6.0.7" />
+        <PackageReference Include="MySql.EntityFrameworkCore" Version="6.0.7"/>
     </ItemGroup>
-
+    
     <ItemGroup>
-      <ProjectReference Include="..\EFCoreSample.Persistence\EFCoreSample.Persistence.csproj" />
+        <ProjectReference Include="..\EFCoreSample.Persistence\EFCoreSample.Persistence.csproj"/>
     </ItemGroup>
 
 </Project>

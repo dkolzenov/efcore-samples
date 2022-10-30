@@ -1,4 +1,4 @@
-# Entity Framework Core samples
+# Entity Framework Core providers sample
 
 ### Ставь звезду, если репозиторий был полезен ★ / Put a star if the repository was useful ★
 

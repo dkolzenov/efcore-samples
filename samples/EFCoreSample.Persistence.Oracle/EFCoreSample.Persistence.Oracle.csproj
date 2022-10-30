@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>EFCoreSample.Persistence.Oracle</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Oracle.EntityFrameworkCore" Version="6.21.61" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\EFCoreSample.Persistence\EFCoreSample.Persistence.csproj" />
+    </ItemGroup>
+
+</Project>

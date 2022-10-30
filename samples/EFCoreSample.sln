@@ -5,17 +5,19 @@ VisualStudioVersion = 25.0.1703.7
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreSample.Api", "EFCoreSample.Api\EFCoreSample.Api.csproj", "{39AF6CA7-1C23-4AB4-B3F8-00234B62CC11}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreSample.Data", "EFCoreSample.Data\EFCoreSample.Data.csproj", "{87A51D6C-5696-4B28-9A4E-792A6DCEEDF3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreSample.Persistence", "EFCoreSample.Persistence\EFCoreSample.Persistence.csproj", "{87A51D6C-5696-4B28-9A4E-792A6DCEEDF3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreSample.Data.Sqlite", "EFCoreSample.Data.Sqlite\EFCoreSample.Data.Sqlite.csproj", "{9EC6A526-1F0E-40C4-9955-5496B0DFCEF0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreSample.Persistence.Sqlite", "EFCoreSample.Persistence.Sqlite\EFCoreSample.Persistence.Sqlite.csproj", "{9EC6A526-1F0E-40C4-9955-5496B0DFCEF0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreSample.Data.PostgreSql", "EFCoreSample.Data.PostgreSql\EFCoreSample.Data.PostgreSql.csproj", "{EFB2B750-B3A0-4DD9-89FA-E38DAD3C443E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreSample.Persistence.PostgreSql", "EFCoreSample.Persistence.PostgreSql\EFCoreSample.Persistence.PostgreSql.csproj", "{EFB2B750-B3A0-4DD9-89FA-E38DAD3C443E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreSample.Data.SqlServer", "EFCoreSample.Data.SqlServer\EFCoreSample.Data.SqlServer.csproj", "{0A1A9F2C-E79C-4DF6-A5EE-767AFF61B4A3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreSample.Persistence.SqlServer", "EFCoreSample.Persistence.SqlServer\EFCoreSample.Persistence.SqlServer.csproj", "{0A1A9F2C-E79C-4DF6-A5EE-767AFF61B4A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreSample.Data.MySql", "EFCoreSample.Data.MySql\EFCoreSample.Data.MySql.csproj", "{911E90D0-32A8-43CC-B9BB-1DFB29A3940B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreSample.Persistence.MySql", "EFCoreSample.Persistence.MySql\EFCoreSample.Persistence.MySql.csproj", "{911E90D0-32A8-43CC-B9BB-1DFB29A3940B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreSample.Data.Oracle", "EFCoreSample.Data.Oracle\EFCoreSample.Data.Oracle.csproj", "{F16D09B2-1382-4148-9B75-9F7D78180A28}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreSample.Persistence.Oracle", "EFCoreSample.Persistence.Oracle\EFCoreSample.Persistence.Oracle.csproj", "{F16D09B2-1382-4148-9B75-9F7D78180A28}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreSample.Domain", "EFCoreSample.Domain\EFCoreSample.Domain.csproj", "{ABF5A571-AC4C-4CD3-9DC6-BF89599BBD33}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{F16D09B2-1382-4148-9B75-9F7D78180A28}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F16D09B2-1382-4148-9B75-9F7D78180A28}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F16D09B2-1382-4148-9B75-9F7D78180A28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABF5A571-AC4C-4CD3-9DC6-BF89599BBD33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABF5A571-AC4C-4CD3-9DC6-BF89599BBD33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABF5A571-AC4C-4CD3-9DC6-BF89599BBD33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABF5A571-AC4C-4CD3-9DC6-BF89599BBD33}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

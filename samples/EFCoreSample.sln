@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreSample.Data.MySql", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreSample.Data.Oracle", "EFCoreSample.Data.Oracle\EFCoreSample.Data.Oracle.csproj", "{F16D09B2-1382-4148-9B75-9F7D78180A28}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreSample.Domain", "EFCoreSample.Domain\EFCoreSample.Domain.csproj", "{ABF5A571-AC4C-4CD3-9DC6-BF89599BBD33}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{F16D09B2-1382-4148-9B75-9F7D78180A28}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F16D09B2-1382-4148-9B75-9F7D78180A28}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F16D09B2-1382-4148-9B75-9F7D78180A28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABF5A571-AC4C-4CD3-9DC6-BF89599BBD33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABF5A571-AC4C-4CD3-9DC6-BF89599BBD33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABF5A571-AC4C-4CD3-9DC6-BF89599BBD33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABF5A571-AC4C-4CD3-9DC6-BF89599BBD33}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

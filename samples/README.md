@@ -29,3 +29,38 @@ dotnet ef database update --project `Project` --startup-project `StartupProject`
 ```bash
 dotnet ef migrations remove --project `Project` --startup-project `StartupProject` --context `Context`
 ```
+
+## Connection strings
+
+All connection strings must be located in the [appsettings.json](https://github.com/dkolzenov/efcore-samples/blob/main/samples/EFCoreSample.Api/appsettings.json) file ([learn more about connection strings](https://learn.microsoft.com/en-us/ef/core/miscellaneous/connection-strings))
+
+Connection string examples:
+* MySQL
+```bash
+server=localhost;database=EFCoreSample;user=user;password=password
+```
+[more MySQL examples here](https://www.connectionstrings.com/mysql)
+
+* Oracle
+```bash
+User Id=user;Password=password;Data Source=localhost:5432/EFCoreSample
+```
+[more Oracle examples here](https://www.connectionstrings.com/oracle)
+
+* PostgreSQL
+```bash
+Host=localhost;Port=5432;Database=EFCoreSample;Username=postgres;Password=password
+```
+[more PostgreSQL examples here](https://www.connectionstrings.com/postgresql)
+
+* SQLite
+```bash
+Data Source=EFCoreSample.db
+```
+[more SQLite examples here](https://www.connectionstrings.com/sqlite)
+
+* MS SQL Server  
+```bash
+Server=(localdb)\\\\mssqllocaldb;Database=EFCoreSample;Trusted_Connection=True;
+```
+[more MS SQL Server examples here](https://www.connectionstrings.com/sql-server)

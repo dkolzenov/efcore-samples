@@ -14,12 +14,13 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\EFCoreSample.Persistence\EFCoreSample.Persistence.csproj" />
-        <ProjectReference Include="..\EFCoreSample.Persistence.MySql\EFCoreSample.Persistence.MySql.csproj" />
-        <ProjectReference Include="..\EFCoreSample.Persistence.Oracle\EFCoreSample.Persistence.Oracle.csproj" />
-        <ProjectReference Include="..\EFCoreSample.Persistence.SqlServer\EFCoreSample.Persistence.SqlServer.csproj" />
-        <ProjectReference Include="..\EFCoreSample.Persistence.Sqlite\EFCoreSample.Persistence.Sqlite.csproj" />
-        <ProjectReference Include="..\EFCoreSample.Persistence.PostgreSql\EFCoreSample.Persistence.PostgreSql.csproj" />
+        <ProjectReference Include="..\EFCoreSample.Persistence.MsAccess\EFCoreSample.Persistence.MsAccess.csproj"/>
+        <ProjectReference Include="..\EFCoreSample.Persistence\EFCoreSample.Persistence.csproj"/>
+        <ProjectReference Include="..\EFCoreSample.Persistence.MySql\EFCoreSample.Persistence.MySql.csproj"/>
+        <ProjectReference Include="..\EFCoreSample.Persistence.Oracle\EFCoreSample.Persistence.Oracle.csproj"/>
+        <ProjectReference Include="..\EFCoreSample.Persistence.SqlServer\EFCoreSample.Persistence.SqlServer.csproj"/>
+        <ProjectReference Include="..\EFCoreSample.Persistence.Sqlite\EFCoreSample.Persistence.Sqlite.csproj"/>
+        <ProjectReference Include="..\EFCoreSample.Persistence.PostgreSql\EFCoreSample.Persistence.PostgreSql.csproj"/>
     </ItemGroup>
 
 </Project>

@@ -64,3 +64,9 @@ Data Source=EFCoreSample.db
 Server=(localdb)\\\\mssqllocaldb;Database=EFCoreSample;Trusted_Connection=True;
 ```
 [more MS SQL Server examples here](https://www.connectionstrings.com/sql-server)
+
+* MS Access  
+```bash
+Provider=Microsoft.ACE.OLEDB.12.0;Data Source=EFCoreSample.accdb;Persist Security Info=False
+```
+[more MS Access examples here](https://www.connectionstrings.com/access)

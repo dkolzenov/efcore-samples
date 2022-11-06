@@ -12,6 +12,7 @@
 * [MySQL](https://www.mysql.com)
 * [PostgreSQL](https://www.postgresql.org)
 * [Oracle](https://www.oracle.com/database)
+* [MS Access](https://www.microsoft.com/en-us/microsoft-365/access)
 
 [Learn more about supported database providers for Entity Framework Core](https://learn.microsoft.com/en-us/ef/core/providers)
 
@@ -89,6 +90,12 @@ Data Source=EFCoreSample.db
 Server=(localdb)\\\\mssqllocaldb;Database=EFCoreSample;Trusted_Connection=True;
 ```
 [more MS SQL Server examples here](https://www.connectionstrings.com/sql-server)
+
+* MS Access  
+```bash
+Provider=Microsoft.ACE.OLEDB.12.0;Data Source=EFCoreSample.accdb;Persist Security Info=False
+```
+[more MS Access examples here](https://www.connectionstrings.com/access)
 
 ## Pay attention
 In this example, the [EFCoreSample.Api](https://github.com/dkolzenov/efcore-samples/tree/main/samples/EFCoreSample.Api) project is connected to all database providers at once, which is basically impossible in a real project:

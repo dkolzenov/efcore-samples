@@ -1,5 +1,6 @@
 ﻿using EFCoreSample.Api.Extensions;
 using EFCoreSample.Persistence.DbContexts;
+using EFCoreSample.Persistence.MsAccess.Extensions;
 using EFCoreSample.Persistence.Sqlite.Extensions;
 using EFCoreSample.Persistence.PostgreSql.Extensions;
 using EFCoreSample.Persistence.SqlServer.Extensions;
@@ -23,6 +24,7 @@ builder.Services.AddCustomPostgreSqlContext<ApplicationDbContext>(builder.Config
 builder.Services.AddCustomSqlServerContext<ApplicationDbContext>(builder.Configuration);
 builder.Services.AddCustomMySqlContext<ApplicationDbContext>(builder.Configuration);
 builder.Services.AddCustomOracleContext<ApplicationDbContext>(builder.Configuration);
+builder.Services.AddCustomMsAccessContext<ApplicationDbContext>(builder.Configuration);
 
 builder.Services.AddCustomCorsPolicy(builder.Configuration);
 

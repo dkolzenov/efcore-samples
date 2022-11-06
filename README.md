@@ -15,24 +15,45 @@
 
 [Learn more about supported database providers for Entity Framework Core](https://learn.microsoft.com/en-us/ef/core/providers)
 
-## Configuring migration
-
-In this example, a migration was created using SQLite provider:
+## Configuring migrations
 
 1. After opening terminal (command line), install dotnet ef tool (if it is not already installed) by entering the following command:
 `dotnet tool install --global dotnet-ef`
 
-2. Make sure that correct connection string is entered in the [samples/EFCoreSample.Api/appsettings.json](https://github.com/dkolzenov/efcore-samples/blob/main/samples/EFCoreSample.Api/appsettings.json) file ([learn more about connection strings](https://learn.microsoft.com/en-us/ef/core/miscellaneous/connection-strings))
+2. Make sure that correct connection string is entered in the [appsettings.json](https://github.com/dkolzenov/efcore-samples/blob/main/samples/EFCoreSample.Api/appsettings.json) file ([learn more about connection strings](https://learn.microsoft.com/en-us/ef/core/miscellaneous/connection-strings))
 
-3. From terminal (command line) go to [/samples](https://github.com/dkolzenov/efcore-samples/tree/main/samples) directory
+3. From terminal (command line) go to [samples](https://github.com/dkolzenov/efcore-samples/tree/main/samples) directory
 
 4. Command to add migration:
-`dotnet ef migrations add Initial --project EFCoreSample.Persistence.Sqlite --startup-project EFCoreSample.Api`
+```bash
+dotnet ef migrations add `Name` --project `Project` --startup-project `StartupProject` --context `Context`
+```
 
 5. Command to update a database:
-`dotnet ef database update --project EFCoreSample.Persistence.Sqlite --startup-project EFCoreSample.Api`
+```bash
+dotnet ef database update --project `Project` --startup-project `StartupProject` --context `Context`
+```
+
+6. Command to remove migration:
+```bash
+dotnet ef migrations remove --project `Project` --startup-project `StartupProject` --context `Context`
+```
 
 [Learn more about dotnet ef commands and parameters](https://learn.microsoft.com/en-us/ef/core/cli/dotnet)
+
+### Reference for migration commands:
+
+`Name` - The name of the migration.  
+__For example__: `Initial`
+
+`Project` - Relative path to the project folder of the target project. Default value is the current folder.  
+__For example__: `EFCoreSample.Persistence.Sqlite`
+
+`StartupProject` - Relative path to the project folder of the startup project. Default value is the current folder.  
+__For example__: `EFCoreSample.Api`
+
+`Context` - The name of the DbContext class to generate. If the DbContext is only one, then the attribute __is not required__.  
+__For example__: `ApplicationDbContext`
 
 ## Pay attention
 In this example, the [EFCoreSample.Api](https://github.com/dkolzenov/efcore-samples/tree/main/samples/EFCoreSample.Api) project is connected to all database providers at once, which is basically impossible in a real project:

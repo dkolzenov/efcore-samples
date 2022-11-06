@@ -59,7 +59,7 @@ __For example__: `ApplicationDbContext`
 
 All connection strings must be located in the [appsettings.json](https://github.com/dkolzenov/efcore-samples/blob/main/samples/EFCoreSample.Api/appsettings.json) file ([learn more about connection strings](https://learn.microsoft.com/en-us/ef/core/miscellaneous/connection-strings))
 
-Connection strings example:
+Connection string examples:
 * MySQL
 ```bash
 server=localhost;database=EFCoreSample;user=user;password=password

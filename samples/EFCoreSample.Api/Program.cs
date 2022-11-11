@@ -13,12 +13,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-// En -> Important: one project cannot contain multiple providers,
+// Important: one project cannot contain multiple providers,
 // the code below is just an example of how to initialize a context
 // using different providers
-// Ru -> Важно: один проект не может содержать несколько поставщиков,
-// приведенный ниже код является лишь примером того, как инициализировать контекст
-// с использованием разных поставщиков
 builder.Services.AddCustomSqliteContext<ApplicationDbContext>(builder.Configuration);
 builder.Services.AddCustomPostgreSqlContext<ApplicationDbContext>(builder.Configuration);
 builder.Services.AddCustomSqlServerContext<ApplicationDbContext>(builder.Configuration);

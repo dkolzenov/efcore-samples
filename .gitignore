@@ -4,6 +4,7 @@
 ### Database ###
 *.accdb
 *.db
+*.db3
 *.db-shm
 *.db-wal
 *.dbf
